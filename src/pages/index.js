@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import StartForm from "../components/start-form"
 let p2;
-let p1;
+let p1="Hi there";
 const Video = ({ token }) => {
   const localVidRef = useRef()
   const remoteVidRef = useRef()
@@ -23,7 +23,7 @@ const Video = ({ token }) => {
           console.log(participant)
            p1=participant;
           console.log(participant.identity)
-           p2=participant.identity;
+           p2="hello";
           participant.tracks.forEach(publication => {
             if (publication.isSubscribed) {
               const track = publication.track
