@@ -46,6 +46,7 @@ const Video = ({ token }) => {
     <div>
       <div ref={localVidRef} />
       <div ref={remoteVidRef} />
+      <h1>HELLO SRIRAM!!!!!!</h1>
     </div>
   )
 }
@@ -59,7 +60,7 @@ const IndexPage = () => {
       <p>
         TODO: 1. Show local video 2. Connect to a room 3. Show participants’
         video (remote) 4. Handle events
-      </p>
+        </p>
     </Layout>
   )
 }
