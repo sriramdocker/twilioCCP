@@ -4,8 +4,7 @@ import TwilioVideo from "twilio-video"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import StartForm from "../components/start-form"
-let p2;
-let p1="Hi there";
+
 const Video = ({ token }) => {
   const localVidRef = useRef()
   const remoteVidRef = useRef()
@@ -16,14 +15,15 @@ const Video = ({ token }) => {
         // Attach the local video
         TwilioVideo.createLocalVideoTrack().then(track => {
           localVidRef.current.appendChild(track.attach())
-        })
+          console.log("new participant!")
+                  })
 
         const addParticipant = participant => {
           console.log("new participant!")
           console.log(participant)
-           p1=participant;
+      
           console.log(participant.identity)
-           p2="hello";
+        
           participant.tracks.forEach(publication => {
             if (publication.isSubscribed) {
               const track = publication.track
@@ -49,9 +49,7 @@ const Video = ({ token }) => {
     <div>
       <div ref={localVidRef} />
       <div ref={remoteVidRef} />
-      <div ref={p1} />
-      <div ref={p2} />
-      
+    
         </div>
   )
 }
