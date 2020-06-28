@@ -46,6 +46,7 @@ const Video = ({ token }) => {
     <div>
       <div ref={localVidRef} />
       <div ref={remoteVidRef} />
+      console.log("new participant!")
       <h1>HELLO SRIRAM!!!!!!</h1>
     </div>
   )
