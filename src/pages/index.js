@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import StartForm from "../components/start-form"
 let p2;
+let p1;
 const Video = ({ token }) => {
   const localVidRef = useRef()
   const remoteVidRef = useRef()
@@ -20,7 +21,7 @@ const Video = ({ token }) => {
         const addParticipant = participant => {
           console.log("new participant!")
           console.log(participant)
-          const p1=participant;
+           p1=participant;
           console.log(participant.identity)
            p2=participant.identity;
           participant.tracks.forEach(publication => {
