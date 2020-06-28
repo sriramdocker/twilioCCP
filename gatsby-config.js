@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Caremore CCP Demo using TWilio`,
-    //description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    //author: `@gatsbyjs`,
+    description: `This site is for the video conferencing demo built using Twilio`,
+    author: `@Sriram`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
