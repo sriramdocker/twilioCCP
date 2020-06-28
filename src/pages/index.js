@@ -20,6 +20,7 @@ const Video = ({ token }) => {
         const addParticipant = participant => {
           console.log("new participant!")
           console.log(participant)
+          console.log(participant.identity)
           participant.tracks.forEach(publication => {
             if (publication.isSubscribed) {
               const track = publication.track
