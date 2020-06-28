@@ -15,7 +15,8 @@ const Video = ({ token }) => {
         // Attach the local video
         TwilioVideo.createLocalVideoTrack().then(track => {
           localVidRef.current.appendChild(track.attach())
-          console.log("new participant!")
+          console.log("This is local host!")
+          console.log(participant)
                   })
 
         const addParticipant = participant => {
@@ -27,7 +28,7 @@ const Video = ({ token }) => {
           participant.tracks.forEach(publication => {
             if (publication.isSubscribed) {
               const track = publication.track
-
+              console.log("new participant123!")
               remoteVidRef.current.appendChild(track.attach())
               console.log("attached to remote video")
             }
