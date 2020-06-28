@@ -46,14 +46,9 @@ const Video = ({ token }) => {
     <div>
       <div ref={localVidRef} />
       <div ref={remoteVidRef} />
-
-      <h1> HELOOO Sir! </h1>
-      <div id="myDIV"></div>
-
-<script>
-document.getElementById("myDIV").innerHTML = "How are?";
-</script>
-
+      <div ref={participant} />
+      <div ref={participant.identity} />
+      
         </div>
   )
 }
