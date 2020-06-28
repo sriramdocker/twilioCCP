@@ -46,10 +46,13 @@ const Video = ({ token }) => {
     <div>
       <div ref={localVidRef} />
       <div ref={remoteVidRef} />
-      console.log("new participant!")
-      Hello, <input type="text" placeholder="Your name here" />!
-      <h1>HELLO SRIRAM!!!!!!</h1>
-    </div>
+      <div id="myDIV"></div>
+
+<script>
+document.getElementById("myDIV").innerHTML = "How are?";
+</script>
+
+        </div>
   )
 }
 
