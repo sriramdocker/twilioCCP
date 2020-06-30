@@ -41,7 +41,7 @@ const Video = ({ token }) => {
 
         room.participants.forEach(addParticipant)
         room.on("participantConnected", addParticipant)
-        console.log(participant.identity + ' has connected');
+        console.log(addParticipant+ ' has connected');
       }
     )
   }, [token])
