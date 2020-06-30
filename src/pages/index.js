@@ -15,7 +15,7 @@ const Video = ({ token }) => {
         // Attach the local video
         TwilioVideo.createLocalVideoTrack().then(track => {
           localVidRef.current.appendChild(track.attach())
-          console.log("This is local host!")
+          console.log("Host has iniated the Video Conference Room!")
                           })
 
         const addParticipant = participant => {
@@ -27,7 +27,6 @@ const Video = ({ token }) => {
           participant.tracks.forEach(publication => {
             if (publication.isSubscribed) {
               const track = publication.track
-              console.log("new participant123!")
               remoteVidRef.current.appendChild(track.attach())
               console.log("attached to remote video")
             }
@@ -41,7 +40,7 @@ const Video = ({ token }) => {
 
         room.participants.forEach(addParticipant)
         room.on("participantConnected", addParticipant)
-        console.log(addParticipant+ ' has connected');
+        //console.log(addParticipant+ ' has connected');
       }
     )
   }, [token])
@@ -62,9 +61,10 @@ const IndexPage = () => {
       <SEO title="Home" />
       {!token ? <StartForm storeToken={setToken} /> : <Video token={token} />}
       <p>
-        TODO: 1. Show local video 2. Connect to a room 3. Show participants’
-        video (remote) 4. Handle events
-        </p>
+       <h2>Terms and Conditions of Use </h2> 
+      <br>Welcome to our video conference room. Enter any display name and room id to get connected to the video 
+      conference room. Make sure to accept Audio and Video toolbar pop-up upon entering the site</br>
+      </p>
     </Layout>
   )
 }
