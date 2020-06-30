@@ -20,7 +20,7 @@ const Video = ({ token }) => {
 
         const addParticipant = participant => {
           console.log("new participant!")
-          console.log(participant)
+          //console.log(participant)
       
           console.log(participant.identity)
         
@@ -61,8 +61,8 @@ const IndexPage = () => {
       <SEO title="Home" />
       {!token ? <StartForm storeToken={setToken} /> : <Video token={token} />}
       <p>
-       <h4>Terms and Conditions of Use </h4> 
-      Welcome to our video Conferencing Room. Enter any display name and room id to get connected and make sure to accept Audio and Video toolbar pop-up upon entering the site.
+       <b>Terms and Conditions of Use </b> <br/>
+      Welcome to our video Conferencing Room. Enter any display name and room id to get connected and make sure to accept Audio and Video toolbar pop-up when prompted.
       </p>
     </Layout>
   )
