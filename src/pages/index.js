@@ -61,9 +61,8 @@ const IndexPage = () => {
       <SEO title="Home" />
       {!token ? <StartForm storeToken={setToken} /> : <Video token={token} />}
       <p>
-       <h2>Terms and Conditions of Use </h2> 
-      <br>Welcome to our video conference room. Enter any display name and room id to get connected to the video 
-      conference room. Make sure to accept Audio and Video toolbar pop-up upon entering the site</br>
+       <h4>Terms and Conditions of Use </h4> 
+      Welcome to our video Conferencing Room. Enter any display name and room id to get connected and make sure to accept Audio and Video toolbar pop-up upon entering the site.
       </p>
     </Layout>
   )

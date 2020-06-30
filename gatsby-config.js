@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Caremore CCP Demo using TWilio`,
+    title: `Caremore CCP Demo using Twilio`,
     description: `This site is for the video conferencing demo built using Twilio`,
     author: `@Sriram`,
   },
